@@ -21,6 +21,7 @@
     --accent-orange: #FF6B35;
     --accent-yellow: #F4D35E;
     --accent-purple: #7B2CBF;
+    --accent-red: #E63946;
     
     /* Neutral Colors */
     --neutral-dark: #1A1A2E;
@@ -1184,6 +1185,75 @@ section {
     margin-bottom: var(--spacing-xs);
 }
 
+/* Activo Description */
+.activo-descripcion {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.5;
+}
+
+/* Activo Type Badges */
+.activo-tipo.tipo-infraestructura {
+    background: rgba(30, 144, 255, 0.2);
+    color: var(--primary-light);
+}
+
+.activo-tipo.tipo-datos {
+    background: rgba(0, 217, 255, 0.2);
+    color: var(--secondary-cyan);
+}
+
+.activo-tipo.tipo-seguridad {
+    background: rgba(6, 255, 165, 0.2);
+    color: var(--secondary-green);
+}
+
+.activo-tipo.tipo-aplicacion {
+    background: rgba(123, 44, 191, 0.2);
+    color: var(--accent-purple);
+}
+
+.activo-tipo.tipo-servicio {
+    background: rgba(244, 211, 94, 0.2);
+    color: var(--accent-yellow);
+}
+
+/* Estado Badges */
+.estado-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.estado-badge.activo {
+    background: rgba(6, 255, 165, 0.2);
+    color: var(--secondary-green);
+}
+
+.estado-badge.desarrollo {
+    background: rgba(0, 217, 255, 0.2);
+    color: var(--secondary-cyan);
+}
+
+.estado-badge.integracion {
+    background: rgba(244, 211, 94, 0.2);
+    color: var(--accent-yellow);
+}
+
+.estado-badge.planificado {
+    background: rgba(123, 44, 191, 0.2);
+    color: var(--accent-purple);
+}
+
+/* Criticidad Colors Update */
+.activo-criticidad.critical {
+    background: rgba(230, 57, 70, 0.2);
+    color: var(--accent-red);
+}
+
 /* Riesgos Section */
 .riesgos-section {
     background: var(--neutral-gray);
@@ -1201,60 +1271,140 @@ section {
 }
 
 .heatmap-container {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-items: center;
+    gap: var(--spacing-md);
 }
 
-.heatmap-y-label {
+.heatmap-y-axis {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.heatmap-y-axis .axis-label {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     color: var(--text-secondary);
     font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.heatmap-y-axis .axis-values {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.heatmap-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
 }
 
 .heatmap-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 4px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 6px;
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
+}
+
+.heatmap-x-axis {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 400px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: var(--spacing-xs);
 }
 
 .heatmap-cell {
     aspect-ratio: 1;
     border-radius: var(--radius-sm);
     transition: var(--transition-fast);
+    cursor: pointer;
+    position: relative;
 }
 
-.heatmap-cell:hover {
-    transform: scale(1.1);
+.heatmap-cell[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    z-index: 1000;
+    pointer-events: none;
 }
 
 .heatmap-cell.low {
     background: rgba(6, 255, 165, 0.3);
+    border: 1px solid rgba(6, 255, 165, 0.5);
 }
 
 .heatmap-cell.medium {
     background: rgba(244, 211, 94, 0.4);
+    border: 1px solid rgba(244, 211, 94, 0.6);
 }
 
 .heatmap-cell.high {
     background: rgba(255, 107, 53, 0.5);
+    border: 1px solid rgba(255, 107, 53, 0.7);
 }
 
 .heatmap-cell.critical {
-    background: rgba(255, 0, 0, 0.6);
+    background: rgba(230, 57, 70, 0.6);
+    border: 1px solid rgba(230, 57, 70, 0.8);
 }
 
 .heatmap-x-label {
-    grid-column: 2;
     color: var(--text-secondary);
     font-weight: 600;
     margin-top: var(--spacing-sm);
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* Risk Card Improvements */
+.riesgo-descripcion {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.riesgo-mitigacion {
+    padding: var(--spacing-md);
+    background: rgba(6, 255, 165, 0.05);
+    border-left: 3px solid var(--secondary-green);
+    border-radius: var(--radius-sm);
+}
+
+.riesgo-mitigacion strong {
+    color: var(--secondary-green);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+.riesgo-mitigacion p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.riesgo-nivel.critical {
+    background: rgba(230, 57, 70, 0.2);
+    color: var(--accent-red);
 }
 
 .heatmap-legend {
@@ -1279,18 +1429,22 @@ section {
 
 .legend-color.low {
     background: rgba(6, 255, 165, 0.3);
+    border: 1px solid rgba(6, 255, 165, 0.5);
 }
 
 .legend-color.medium {
     background: rgba(244, 211, 94, 0.4);
+    border: 1px solid rgba(244, 211, 94, 0.6);
 }
 
 .legend-color.high {
     background: rgba(255, 107, 53, 0.5);
+    border: 1px solid rgba(255, 107, 53, 0.7);
 }
 
 .legend-color.critical {
-    background: rgba(255, 0, 0, 0.6);
+    background: rgba(230, 57, 70, 0.6);
+    border: 1px solid rgba(230, 57, 70, 0.8);
 }
 
 /* Lista de Riesgos */
@@ -1395,9 +1549,116 @@ section {
     opacity: 0.7;
 }
 
+/* BIA Card Gradients by Criticality */
+.bia-card.criticidad-critica {
+    background: linear-gradient(135deg, rgba(230, 57, 70, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    border-left: 3px solid var(--accent-red);
+}
+
+.bia-card.criticidad-alta {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    border-left: 3px solid var(--accent-orange);
+}
+
+.bia-card.criticidad-media {
+    background: linear-gradient(135deg, rgba(244, 211, 94, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    border-left: 3px solid var(--accent-yellow);
+}
+
 .bia-header {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.bia-header .bia-icon {
+    align-self: flex-start;
+}
+
+.bia-criticidad {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+.bia-criticidad.critical {
+    background: rgba(230, 57, 70, 0.2);
+    color: var(--accent-red);
+}
+
+.bia-criticidad.high {
+    background: rgba(255, 107, 53, 0.2);
+    color: var(--accent-orange);
+}
+
+.bia-criticidad.medium {
+    background: rgba(244, 211, 94, 0.2);
+    color: var(--accent-yellow);
+}
+
+.bia-descripcion {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+}
+
+.bia-dependencias,
+.bia-estrategia {
+    margin-top: var(--spacing-lg);
+}
+
+.bia-dependencias h4,
+.bia-estrategia h4 {
+    color: var(--secondary-cyan);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.bia-dependencias ul,
+.bia-estrategia ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bia-dependencias li,
+.bia-estrategia li {
+    color: var(--text-secondary);
+    padding: var(--spacing-xs) 0;
+    font-size: 0.9rem;
+}
+
+.bia-dependencias li::before {
+    content: "• ";
+    color: var(--secondary-cyan);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+}
+
+.bia-estrategia li::before {
+    content: "✓ ";
+    color: var(--secondary-green);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+}
+
+.impacto-clientes {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: var(--spacing-xs);
+}
+
+.timeline-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
 }
