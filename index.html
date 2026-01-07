@@ -837,147 +837,130 @@
     </section>
 
     <!-- Matriz de Riesgos Section -->
-    <section id="riesgos" class="riesgos-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Matriz de Riesgos</h2>
-                <p class="section-subtitle">Análisis y gestión de riesgos del proyecto</p>
-            </div>
+<section id="riesgos" class="riesgos-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Matriz de Riesgos</h2>
+            <p class="section-subtitle">Análisis de probabilidad e impacto de riesgos identificados</p>
+        </div>
 
-            <!-- Heat Map -->
-            <div class="riesgos-heatmap glass-card">
-                <h3 class="heatmap-title">Mapa de Calor: Probabilidad vs Impacto</h3>
-                <div class="heatmap-container">
-                    <div class="heatmap-y-axis">
-                        <div class="axis-label">Probabilidad</div>
-                        <div class="axis-values">
-                            <span>Muy Alta</span>
-                            <span>Alta</span>
-                            <span>Media</span>
-                            <span>Baja</span>
-                        </div>
-                    </div>
-                    <div class="heatmap-content">
-                        <div class="heatmap-grid">
-                            <!-- Row 4 (Muy Alta) -->
-                            <div class="heatmap-cell high"></div>
-                            <div class="heatmap-cell high"></div>
-                            <div class="heatmap-cell critical"></div>
-                            <div class="heatmap-cell critical" data-tooltip="Seguridad Propia" role="button" tabindex="0" aria-label="Riesgo Crítico: Seguridad Propia"></div>
-                            
-                            <!-- Row 3 (Alta) -->
-                            <div class="heatmap-cell medium"></div>
-                            <div class="heatmap-cell high" data-tooltip="Escasez de Talento" role="button" tabindex="0" aria-label="Riesgo Alto: Escasez de Talento"></div>
-                            <div class="heatmap-cell high" data-tooltip="Dependencia Tecnológica" role="button" tabindex="0" aria-label="Riesgo Alto: Dependencia Tecnológica"></div>
-                            <div class="heatmap-cell critical"></div>
-                            
-                            <!-- Row 2 (Media) -->
-                            <div class="heatmap-cell low"></div>
-                            <div class="heatmap-cell medium" data-tooltip="Adopción del Mercado" role="button" tabindex="0" aria-label="Riesgo Medio: Adopción del Mercado"></div>
-                            <div class="heatmap-cell high"></div>
-                            <div class="heatmap-cell high"></div>
-                            
-                            <!-- Row 1 (Baja) -->
-                            <div class="heatmap-cell low"></div>
-                            <div class="heatmap-cell low"></div>
-                            <div class="heatmap-cell medium"></div>
-                            <div class="heatmap-cell medium"></div>
-                        </div>
-                        <div class="heatmap-x-axis">
-                            <span>Bajo</span>
-                            <span>Medio</span>
-                            <span>Alto</span>
-                            <span>Crítico</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="heatmap-x-label">Impacto</div>
-                <div class="heatmap-legend">
-                    <div class="legend-item">
-                        <div class="legend-color low"></div>
-                        <span>🟢 Bajo</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-color medium"></div>
-                        <span>🟡 Medio</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-color high"></div>
-                        <span>🟠 Alto</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-color critical"></div>
-                        <span>🔴 Crítico</span>
-                    </div>
-                </div>
-            </div>
+        <!-- Tabla de Riesgos Detallada -->
+        <div class="riesgos-table-container">
+            <table class="riesgos-table glass-card">
+                <thead>
+                    <tr>
+                        <th>Riesgo</th>
+                        <th>Descripción e Impacto</th>
+                        <th>Nivel</th>
+                        <th>Estrategia de Mitigación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Escasez de Talento</strong></td>
+                        <td>Dificultad para reclutar profesionales debido a la brecha de talento en México. </td>
+                        <td><span class="badge badge-alto">Alto</span></td>
+                        <td>Implementar plan de capacitación internos y retención.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dependencia Tecnológica</strong></td>
+                        <td>Riesgo de aumentos de costo o fallos masivos de proveedores externos (EDR).</td>
+                        <td><span class="badge badge-alto">Alto</span></td>
+                        <td>Diseño modular agnóstico para poder cambiar de proveedor si es necesario.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Adopción del Mercado</strong></td>
+                        <td>Resistencia Cultural de las PyMEs por la adopción del servicio al pensar "a mí no me pasará algo así".</td>
+                        <td><span class="badge badge-medio">Medio</span></td>
+                        <td>Programa piloto con 10 clientes para generar casos de éxito.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Seguridad Propia</strong></td>
+                        <td>Compromiso de la infraestructura FortaGuard, que afecte la seguridad y confianza. </td>
+                        <td><span class="badge badge-critico">Crítico</span></td>
+                        <td>Auditorías continuas y separación estricta de entornos.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-            <!-- Lista de Riesgos -->
-            <div class="riesgos-lista">
-                <h3 class="lista-title">Riesgos Identificados</h3>
+        <!-- Heat Map Visual -->
+        <div class="risk-matrix-container">
+            <h3 class="risk-matrix-title">Mapa de Calor de Riesgos</h3>
+            <div class="risk-matrix">
+                <!-- Etiqueta Probabilidad (vertical izquierda) -->
+                <div class="risk-matrix-label-y">Probabilidad</div>
                 
-                <!-- Riesgo 1: Escasez de Talento -->
-                <div class="riesgo-card glass-card">
-                    <div class="riesgo-header">
-                        <h4 class="riesgo-nombre">Escasez de Talento</h4>
-                        <span class="riesgo-nivel high">Alto</span>
-                    </div>
-                    <p class="riesgo-descripcion">
-                        <strong>Descripción e Impacto:</strong> Dificultad para reclutar profesionales debido a la brecha de talento en México.
-                    </p>
-                    <div class="riesgo-mitigacion">
-                        <strong>Estrategia de Mitigación:</strong>
-                        <p>Implementar plan de capacitación internos y retención.</p>
-                    </div>
+                <!-- Etiqueta Impacto (horizontal arriba) -->
+                <div class="risk-matrix-label-x">Impacto</div>
+                
+                <!-- Etiquetas Y (Probabilidad) -->
+                <div class="risk-level-label y-label">Muy Alta</div>
+                <div class="risk-level-label y-label">Alta</div>
+                <div class="risk-level-label y-label">Media</div>
+                <div class="risk-level-label y-label">Baja</div>
+                
+                <!-- Etiquetas X (Impacto) -->
+                <div class="risk-level-label x-label">Bajo</div>
+                <div class="risk-level-label x-label">Medio</div>
+                <div class="risk-level-label x-label">Alto</div>
+                <div class="risk-level-label x-label">Crítico</div>
+                
+                <!-- Fila 1: Muy Alta Probabilidad -->
+                <div class="risk-cell risk-alto" style="grid-column: 2; grid-row:  2;"></div>
+                <div class="risk-cell risk-alto" style="grid-column: 3; grid-row: 2;"></div>
+                <div class="risk-cell risk-critico" style="grid-column:  4; grid-row: 2;"></div>
+                <div class="risk-cell risk-critico" style="grid-column: 5; grid-row:  2;"></div>
+                
+                <!-- Fila 2: Alta Probabilidad -->
+                <div class="risk-cell risk-medio" style="grid-column: 2; grid-row:  3;"></div>
+                <div class="risk-cell risk-alto" style="grid-column: 3; grid-row:  3;">
+                    <div class="risk-marker" title="Dependencia Tecnológica"></div>
                 </div>
-
-                <!-- Riesgo 2: Dependencia Tecnológica -->
-                <div class="riesgo-card glass-card">
-                    <div class="riesgo-header">
-                        <h4 class="riesgo-nombre">Dependencia Tecnológica</h4>
-                        <span class="riesgo-nivel high">Alto</span>
-                    </div>
-                    <p class="riesgo-descripcion">
-                        <strong>Descripción e Impacto:</strong> Riesgo de aumentos de costo o fallos masivos de proveedores externos (EDR).
-                    </p>
-                    <div class="riesgo-mitigacion">
-                        <strong>Estrategia de Mitigación:</strong>
-                        <p>Diseño modular agnóstico para poder cambiar de proveedor si es necesario.</p>
-                    </div>
+                <div class="risk-cell risk-alto" style="grid-column: 4; grid-row: 3;">
+                    <div class="risk-marker" title="Escasez de Talento"></div>
                 </div>
-
-                <!-- Riesgo 3: Adopción del Mercado -->
-                <div class="riesgo-card glass-card">
-                    <div class="riesgo-header">
-                        <h4 class="riesgo-nombre">Adopción del Mercado</h4>
-                        <span class="riesgo-nivel medium">Medio</span>
-                    </div>
-                    <p class="riesgo-descripcion">
-                        <strong>Descripción e Impacto:</strong> Resistencia Cultural de las PyMEs por la adopción del servicio al pensar "a mí no me pasará algo así".
-                    </p>
-                    <div class="riesgo-mitigacion">
-                        <strong>Estrategia de Mitigación:</strong>
-                        <p>Programa piloto con 10 clientes para generar casos de éxito.</p>
-                    </div>
+                <div class="risk-cell risk-critico" style="grid-column: 5; grid-row: 3;">
+                    <div class="risk-marker" title="Seguridad Propia"></div>
                 </div>
+                
+                <!-- Fila 3: Media Probabilidad -->
+                <div class="risk-cell risk-bajo" style="grid-column: 2; grid-row: 4;"></div>
+                <div class="risk-cell risk-medio" style="grid-column: 3; grid-row: 4;">
+                    <div class="risk-marker" title="Adopción del Mercado"></div>
+                </div>
+                <div class="risk-cell risk-alto" style="grid-column: 4; grid-row: 4;"></div>
+                <div class="risk-cell risk-alto" style="grid-column: 5; grid-row: 4;"></div>
+                
+                <!-- Fila 4: Baja Probabilidad -->
+                <div class="risk-cell risk-bajo" style="grid-column:  2; grid-row: 5;"></div>
+                <div class="risk-cell risk-bajo" style="grid-column:  3; grid-row: 5;"></div>
+                <div class="risk-cell risk-medio" style="grid-column:  4; grid-row: 5;"></div>
+                <div class="risk-cell risk-alto" style="grid-column:  5; grid-row: 5;"></div>
+            </div>
 
-                <!-- Riesgo 4: Seguridad Propia -->
-                <div class="riesgo-card glass-card">
-                    <div class="riesgo-header">
-                        <h4 class="riesgo-nombre">Seguridad Propia</h4>
-                        <span class="riesgo-nivel critical">Crítico</span>
-                    </div>
-                    <p class="riesgo-descripcion">
-                        <strong>Descripción e Impacto:</strong> Compromiso de la infraestructura FortaGuard, que afecte la seguridad y confianza.
-                    </p>
-                    <div class="riesgo-mitigacion">
-                        <strong>Estrategia de Mitigación:</strong>
-                        <p>Auditorías continuas y separación estricta de entornos.</p>
-                    </div>
+            <!-- Leyenda -->
+            <div class="risk-legend">
+                <div class="risk-legend-item">
+                    <div class="legend-color risk-bajo"></div>
+                    <span>Riesgo Bajo</span>
+                </div>
+                <div class="risk-legend-item">
+                    <div class="legend-color risk-medio"></div>
+                    <span>Riesgo Medio</span>
+                </div>
+                <div class="risk-legend-item">
+                    <div class="legend-color risk-alto"></div>
+                    <span>Riesgo Alto</span>
+                </div>
+                <div class="risk-legend-item">
+                    <div class="legend-color risk-critico"></div>
+                    <span>Riesgo Crítico</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- BIA Section -->
     <section id="bia" class="bia-section">
