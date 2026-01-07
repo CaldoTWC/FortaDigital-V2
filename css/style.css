@@ -1118,10 +1118,6 @@ section {
     padding: var(--spacing-lg);
 }
 
-.activo-card.placeholder {
-    opacity: 0.7;
-}
-
 .activo-icon {
     width: 60px;
     height: 60px;
@@ -1462,10 +1458,6 @@ section {
     padding: var(--spacing-lg);
 }
 
-.riesgo-card.placeholder {
-    opacity: 0.7;
-}
-
 .riesgo-header {
     display: flex;
     justify-content: space-between;
@@ -1543,10 +1535,6 @@ section {
 
 .bia-card {
     padding: var(--spacing-xl);
-}
-
-.bia-card.placeholder {
-    opacity: 0.7;
 }
 
 /* BIA Card Gradients by Criticality */
@@ -1658,9 +1646,6 @@ section {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-}
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
 }
 
 .bia-icon {
