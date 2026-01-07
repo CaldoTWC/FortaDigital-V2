@@ -690,221 +690,224 @@
         </div>
     </section>
 
-    <!-- Inventario de Activos Section (Placeholder) -->
+    <!-- Inventario de Activos Section -->
     <section id="activos" class="activos-section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Inventario de Activos</h2>
-                <p class="section-subtitle">Gestión y control de activos críticos</p>
-                <div class="placeholder-badge">
-                    <i class="fas fa-clock"></i> Sección en desarrollo
-                </div>
+                <p class="section-subtitle">Gestión y control de activos críticos de infraestructura</p>
             </div>
             <div class="activos-grid">
-                <!-- Placeholder para 9 activos -->
-                <div class="activo-card glass-card placeholder">
-                    <div class="activo-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3 class="activo-nombre">Servidor Principal</h3>
+                <!-- Activo 1: Cluster Kubernetes -->
+                <div class="activo-card glass-card">
+                    <div class="activo-icon">🎯</div>
+                    <h3 class="activo-nombre">Cluster Kubernetes (GKE/EKS)</h3>
                     <div class="activo-info">
-                        <span class="activo-tipo">Infraestructura</span>
-                        <span class="activo-criticidad critical">Crítico</span>
+                        <span class="activo-tipo tipo-infraestructura">Infraestructura</span>
+                        <span class="activo-criticidad critical">Crítica</span>
                     </div>
+                    <p class="activo-descripcion">Orquestación de microservicios</p>
                     <div class="activo-details">
-                        <p><strong>Responsable:</strong> TBD</p>
-                        <p><strong>Estado:</strong> Operativo</p>
+                        <p><strong>Responsable:</strong> Aldo Salazar</p>
+                        <p><strong>Estado:</strong> <span class="estado-badge activo">Activo</span></p>
                     </div>
                 </div>
 
-                <div class="activo-card glass-card placeholder">
-                    <div class="activo-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3 class="activo-nombre">Base de Datos</h3>
+                <!-- Activo 2: Base de Datos SQL -->
+                <div class="activo-card glass-card">
+                    <div class="activo-icon">🗄️</div>
+                    <h3 class="activo-nombre">Base de Datos SQL Multi-tenant</h3>
                     <div class="activo-info">
-                        <span class="activo-tipo">Datos</span>
-                        <span class="activo-criticidad critical">Crítico</span>
+                        <span class="activo-tipo tipo-datos">Datos</span>
+                        <span class="activo-criticidad critical">Crítica</span>
                     </div>
+                    <p class="activo-descripcion">Almacenamiento de datos de clientes</p>
                     <div class="activo-details">
-                        <p><strong>Responsable:</strong> TBD</p>
-                        <p><strong>Estado:</strong> Operativo</p>
+                        <p><strong>Responsable:</strong> Aldo Salazar</p>
+                        <p><strong>Estado:</strong> <span class="estado-badge activo">Activo</span></p>
                     </div>
                 </div>
 
-                <div class="activo-card glass-card placeholder">
-                    <div class="activo-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="activo-nombre">WAF</h3>
+                <!-- Activo 3: Base de Datos NoSQL -->
+                <div class="activo-card glass-card">
+                    <div class="activo-icon">📊</div>
+                    <h3 class="activo-nombre">Base de Datos NoSQL/Time-Series</h3>
                     <div class="activo-info">
-                        <span class="activo-tipo">Seguridad</span>
-                        <span class="activo-criticidad high">Alto</span>
+                        <span class="activo-tipo tipo-datos">Datos</span>
+                        <span class="activo-criticidad high">Alta</span>
                     </div>
+                    <p class="activo-descripcion">Logs y telemetría de eventos</p>
                     <div class="activo-details">
-                        <p><strong>Responsable:</strong> TBD</p>
-                        <p><strong>Estado:</strong> Activo</p>
+                        <p><strong>Responsable:</strong> Aldo Salazar</p>
+                        <p><strong>Estado:</strong> <span class="estado-badge activo">Activo</span></p>
                     </div>
                 </div>
 
-                <div class="activo-card glass-card placeholder">
-                    <div class="activo-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3 class="activo-nombre">Infraestructura Cloud</h3>
+                <!-- Activo 4: API Gateway + WAF -->
+                <div class="activo-card glass-card">
+                    <div class="activo-icon">🛡️</div>
+                    <h3 class="activo-nombre">API Gateway + WAF</h3>
                     <div class="activo-info">
-                        <span class="activo-tipo">Infraestructura</span>
-                        <span class="activo-criticidad high">Alto</span>
+                        <span class="activo-tipo tipo-seguridad">Seguridad</span>
+                        <span class="activo-criticidad critical">Crítica</span>
                     </div>
+                    <p class="activo-descripcion">Control de acceso y protección DDoS</p>
                     <div class="activo-details">
-                        <p><strong>Responsable:</strong> TBD</p>
-                        <p><strong>Estado:</strong> Operativo</p>
+                        <p><strong>Responsable:</strong> Aldo Salazar</p>
+                        <p><strong>Estado:</strong> <span class="estado-badge activo">Activo</span></p>
                     </div>
                 </div>
 
-                <div class="activo-card glass-card placeholder">
-                    <div class="activo-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3 class="activo-nombre">Estaciones de Trabajo</h3>
+                <!-- Activo 5: Portal Web Cliente -->
+                <div class="activo-card glass-card">
+                    <div class="activo-icon">💻</div>
+                    <h3 class="activo-nombre">Portal Web Cliente</h3>
                     <div class="activo-info">
-                        <span class="activo-tipo">Hardware</span>
-                        <span class="activo-criticidad medium">Medio</span>
+                        <span class="activo-tipo tipo-aplicacion">Aplicación</span>
+                        <span class="activo-criticidad high">Alta</span>
                     </div>
+                    <p class="activo-descripcion">Dashboard de visualización para PyMEs</p>
                     <div class="activo-details">
-                        <p><strong>Responsable:</strong> TBD</p>
-                        <p><strong>Estado:</strong> Activo</p>
+                        <p><strong>Responsable:</strong> Issac Zetina</p>
+                        <p><strong>Estado:</strong> <span class="estado-badge desarrollo">En Desarrollo</span></p>
                     </div>
                 </div>
 
-                <div class="activo-card glass-card placeholder">
-                    <div class="activo-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3 class="activo-nombre">Red Corporativa</h3>
+                <!-- Activo 6: Portal SOC -->
+                <div class="activo-card glass-card">
+                    <div class="activo-icon">🖥️</div>
+                    <h3 class="activo-nombre">Portal SOC (Equipo Interno)</h3>
                     <div class="activo-info">
-                        <span class="activo-tipo">Infraestructura</span>
-                        <span class="activo-criticidad high">Alto</span>
+                        <span class="activo-tipo tipo-aplicacion">Aplicación</span>
+                        <span class="activo-criticidad high">Alta</span>
                     </div>
+                    <p class="activo-descripcion">Herramientas de administración y respuesta</p>
                     <div class="activo-details">
-                        <p><strong>Responsable:</strong> TBD</p>
-                        <p><strong>Estado:</strong> Operativo</p>
+                        <p><strong>Responsable:</strong> Issac Zetina</p>
+                        <p><strong>Estado:</strong> <span class="estado-badge desarrollo">En Desarrollo</span></p>
                     </div>
                 </div>
 
-                <div class="activo-card glass-card placeholder">
-                    <div class="activo-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="activo-nombre">Repositorio de Código</h3>
+                <!-- Activo 7: Motor EDR -->
+                <div class="activo-card glass-card">
+                    <div class="activo-icon">🔍</div>
+                    <h3 class="activo-nombre">Motor EDR (Endpoint Detection)</h3>
                     <div class="activo-info">
-                        <span class="activo-tipo">Software</span>
-                        <span class="activo-criticidad high">Alto</span>
+                        <span class="activo-tipo tipo-servicio">Servicio</span>
+                        <span class="activo-criticidad critical">Crítica</span>
                     </div>
+                    <p class="activo-descripcion">Detección de amenazas en endpoints</p>
                     <div class="activo-details">
-                        <p><strong>Responsable:</strong> TBD</p>
-                        <p><strong>Estado:</strong> Activo</p>
+                        <p><strong>Responsable:</strong> Aldo Salazar</p>
+                        <p><strong>Estado:</strong> <span class="estado-badge integracion">Integración</span></p>
                     </div>
                 </div>
 
-                <div class="activo-card glass-card placeholder">
-                    <div class="activo-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3 class="activo-nombre">Sistema de Email</h3>
+                <!-- Activo 8: Motor de Escaneo -->
+                <div class="activo-card glass-card">
+                    <div class="activo-icon">🔬</div>
+                    <h3 class="activo-nombre">Motor de Escaneo de Vulnerabilidades</h3>
                     <div class="activo-info">
-                        <span class="activo-tipo">Comunicación</span>
-                        <span class="activo-criticidad medium">Medio</span>
+                        <span class="activo-tipo tipo-servicio">Servicio</span>
+                        <span class="activo-criticidad high">Alta</span>
                     </div>
+                    <p class="activo-descripcion">Análisis continuo de vulnerabilidades</p>
                     <div class="activo-details">
-                        <p><strong>Responsable:</strong> TBD</p>
-                        <p><strong>Estado:</strong> Operativo</p>
+                        <p><strong>Responsable:</strong> Aldo Salazar</p>
+                        <p><strong>Estado:</strong> <span class="estado-badge desarrollo">En Desarrollo</span></p>
                     </div>
                 </div>
 
-                <div class="activo-card glass-card placeholder">
-                    <div class="activo-icon">
-                        <i class="fas fa-key"></i>
-                    </div>
-                    <h3 class="activo-nombre">Sistema de Identidad</h3>
+                <!-- Activo 9: Sistema de Simulación -->
+                <div class="activo-card glass-card">
+                    <div class="activo-icon">🎣</div>
+                    <h3 class="activo-nombre">Sistema de Simulación de Phishing</h3>
                     <div class="activo-info">
-                        <span class="activo-tipo">Seguridad</span>
-                        <span class="activo-criticidad critical">Crítico</span>
+                        <span class="activo-tipo tipo-servicio">Servicio</span>
+                        <span class="activo-criticidad medium">Media</span>
                     </div>
+                    <p class="activo-descripcion">Capacitación en ingeniería social</p>
                     <div class="activo-details">
-                        <p><strong>Responsable:</strong> TBD</p>
-                        <p><strong>Estado:</strong> Activo</p>
+                        <p><strong>Responsable:</strong> Cristopher Pérez</p>
+                        <p><strong>Estado:</strong> <span class="estado-badge planificado">Planificado</span></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Matriz de Riesgos Section (Placeholder) -->
+    <!-- Matriz de Riesgos Section -->
     <section id="riesgos" class="riesgos-section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Matriz de Riesgos</h2>
                 <p class="section-subtitle">Análisis y gestión de riesgos del proyecto</p>
-                <div class="placeholder-badge">
-                    <i class="fas fa-clock"></i> Sección en desarrollo
-                </div>
             </div>
 
             <!-- Heat Map -->
             <div class="riesgos-heatmap glass-card">
                 <h3 class="heatmap-title">Mapa de Calor: Probabilidad vs Impacto</h3>
                 <div class="heatmap-container">
-                    <div class="heatmap-y-label">Probabilidad</div>
-                    <div class="heatmap-grid">
-                        <div class="heatmap-cell low"></div>
-                        <div class="heatmap-cell low"></div>
-                        <div class="heatmap-cell medium"></div>
-                        <div class="heatmap-cell medium"></div>
-                        <div class="heatmap-cell high"></div>
-                        
-                        <div class="heatmap-cell low"></div>
-                        <div class="heatmap-cell medium"></div>
-                        <div class="heatmap-cell medium"></div>
-                        <div class="heatmap-cell high"></div>
-                        <div class="heatmap-cell high"></div>
-                        
-                        <div class="heatmap-cell medium"></div>
-                        <div class="heatmap-cell medium"></div>
-                        <div class="heatmap-cell high"></div>
-                        <div class="heatmap-cell high"></div>
-                        <div class="heatmap-cell critical"></div>
-                        
-                        <div class="heatmap-cell medium"></div>
-                        <div class="heatmap-cell high"></div>
-                        <div class="heatmap-cell high"></div>
-                        <div class="heatmap-cell critical"></div>
-                        <div class="heatmap-cell critical"></div>
-                        
-                        <div class="heatmap-cell high"></div>
-                        <div class="heatmap-cell high"></div>
-                        <div class="heatmap-cell critical"></div>
-                        <div class="heatmap-cell critical"></div>
-                        <div class="heatmap-cell critical"></div>
+                    <div class="heatmap-y-axis">
+                        <div class="axis-label">Probabilidad</div>
+                        <div class="axis-values">
+                            <span>Muy Alta</span>
+                            <span>Alta</span>
+                            <span>Media</span>
+                            <span>Baja</span>
+                        </div>
                     </div>
-                    <div class="heatmap-x-label">Impacto</div>
+                    <div class="heatmap-content">
+                        <div class="heatmap-grid">
+                            <!-- Row 4 (Muy Alta) -->
+                            <div class="heatmap-cell high"></div>
+                            <div class="heatmap-cell high"></div>
+                            <div class="heatmap-cell critical"></div>
+                            <div class="heatmap-cell critical" data-tooltip="Seguridad Propia" role="button" tabindex="0" aria-label="Riesgo Crítico: Seguridad Propia"></div>
+                            
+                            <!-- Row 3 (Alta) -->
+                            <div class="heatmap-cell medium"></div>
+                            <div class="heatmap-cell high" data-tooltip="Escasez de Talento" role="button" tabindex="0" aria-label="Riesgo Alto: Escasez de Talento"></div>
+                            <div class="heatmap-cell high" data-tooltip="Dependencia Tecnológica" role="button" tabindex="0" aria-label="Riesgo Alto: Dependencia Tecnológica"></div>
+                            <div class="heatmap-cell critical"></div>
+                            
+                            <!-- Row 2 (Media) -->
+                            <div class="heatmap-cell low"></div>
+                            <div class="heatmap-cell medium" data-tooltip="Adopción del Mercado" role="button" tabindex="0" aria-label="Riesgo Medio: Adopción del Mercado"></div>
+                            <div class="heatmap-cell high"></div>
+                            <div class="heatmap-cell high"></div>
+                            
+                            <!-- Row 1 (Baja) -->
+                            <div class="heatmap-cell low"></div>
+                            <div class="heatmap-cell low"></div>
+                            <div class="heatmap-cell medium"></div>
+                            <div class="heatmap-cell medium"></div>
+                        </div>
+                        <div class="heatmap-x-axis">
+                            <span>Bajo</span>
+                            <span>Medio</span>
+                            <span>Alto</span>
+                            <span>Crítico</span>
+                        </div>
+                    </div>
                 </div>
+                <div class="heatmap-x-label">Impacto</div>
                 <div class="heatmap-legend">
                     <div class="legend-item">
                         <div class="legend-color low"></div>
-                        <span>Bajo</span>
+                        <span>🟢 Bajo</span>
                     </div>
                     <div class="legend-item">
                         <div class="legend-color medium"></div>
-                        <span>Medio</span>
+                        <span>🟡 Medio</span>
                     </div>
                     <div class="legend-item">
                         <div class="legend-color high"></div>
-                        <span>Alto</span>
+                        <span>🟠 Alto</span>
                     </div>
                     <div class="legend-item">
                         <div class="legend-color critical"></div>
-                        <span>Crítico</span>
+                        <span>🔴 Crítico</span>
                     </div>
                 </div>
             </div>
@@ -912,99 +915,89 @@
             <!-- Lista de Riesgos -->
             <div class="riesgos-lista">
                 <h3 class="lista-title">Riesgos Identificados</h3>
-                <div class="riesgo-card glass-card placeholder">
+                
+                <!-- Riesgo 1: Escasez de Talento -->
+                <div class="riesgo-card glass-card">
                     <div class="riesgo-header">
-                        <h4 class="riesgo-nombre">Brecha de Seguridad en Datos de Clientes</h4>
-                        <span class="riesgo-nivel critical">Crítico</span>
-                    </div>
-                    <div class="riesgo-details">
-                        <div class="riesgo-metric">
-                            <span class="metric-label">Probabilidad:</span>
-                            <span class="metric-value">Media</span>
-                        </div>
-                        <div class="riesgo-metric">
-                            <span class="metric-label">Impacto:</span>
-                            <span class="metric-value">Muy Alto</span>
-                        </div>
-                    </div>
-                    <p class="riesgo-mitigacion"><strong>Mitigación:</strong> Implementar cifrado end-to-end, auditorías continuas</p>
-                </div>
-
-                <div class="riesgo-card glass-card placeholder">
-                    <div class="riesgo-header">
-                        <h4 class="riesgo-nombre">Interrupción del Servicio (DDoS)</h4>
+                        <h4 class="riesgo-nombre">Escasez de Talento</h4>
                         <span class="riesgo-nivel high">Alto</span>
                     </div>
-                    <div class="riesgo-details">
-                        <div class="riesgo-metric">
-                            <span class="metric-label">Probabilidad:</span>
-                            <span class="metric-value">Media</span>
-                        </div>
-                        <div class="riesgo-metric">
-                            <span class="metric-label">Impacto:</span>
-                            <span class="metric-value">Alto</span>
-                        </div>
+                    <p class="riesgo-descripcion">
+                        <strong>Descripción e Impacto:</strong> Dificultad para reclutar profesionales debido a la brecha de talento en México.
+                    </p>
+                    <div class="riesgo-mitigacion">
+                        <strong>Estrategia de Mitigación:</strong>
+                        <p>Implementar plan de capacitación internos y retención.</p>
                     </div>
-                    <p class="riesgo-mitigacion"><strong>Mitigación:</strong> WAF + DDoS protection, infraestructura redundante</p>
                 </div>
 
-                <div class="riesgo-card glass-card placeholder">
+                <!-- Riesgo 2: Dependencia Tecnológica -->
+                <div class="riesgo-card glass-card">
                     <div class="riesgo-header">
-                        <h4 class="riesgo-nombre">Falta de Personal Certificado</h4>
-                        <span class="riesgo-nivel medium">Medio</span>
+                        <h4 class="riesgo-nombre">Dependencia Tecnológica</h4>
+                        <span class="riesgo-nivel high">Alto</span>
                     </div>
-                    <div class="riesgo-details">
-                        <div class="riesgo-metric">
-                            <span class="metric-label">Probabilidad:</span>
-                            <span class="metric-value">Media</span>
-                        </div>
-                        <div class="riesgo-metric">
-                            <span class="metric-label">Impacto:</span>
-                            <span class="metric-value">Medio</span>
-                        </div>
+                    <p class="riesgo-descripcion">
+                        <strong>Descripción e Impacto:</strong> Riesgo de aumentos de costo o fallos masivos de proveedores externos (EDR).
+                    </p>
+                    <div class="riesgo-mitigacion">
+                        <strong>Estrategia de Mitigación:</strong>
+                        <p>Diseño modular agnóstico para poder cambiar de proveedor si es necesario.</p>
                     </div>
-                    <p class="riesgo-mitigacion"><strong>Mitigación:</strong> Programa de capacitación continua y certificaciones</p>
                 </div>
 
-                <div class="riesgo-card glass-card placeholder">
+                <!-- Riesgo 3: Adopción del Mercado -->
+                <div class="riesgo-card glass-card">
                     <div class="riesgo-header">
-                        <h4 class="riesgo-nombre">Retrasos en Integración de APIs</h4>
+                        <h4 class="riesgo-nombre">Adopción del Mercado</h4>
                         <span class="riesgo-nivel medium">Medio</span>
                     </div>
-                    <div class="riesgo-details">
-                        <div class="riesgo-metric">
-                            <span class="metric-label">Probabilidad:</span>
-                            <span class="metric-value">Baja</span>
-                        </div>
-                        <div class="riesgo-metric">
-                            <span class="metric-label">Impacto:</span>
-                            <span class="metric-value">Medio</span>
-                        </div>
+                    <p class="riesgo-descripcion">
+                        <strong>Descripción e Impacto:</strong> Resistencia Cultural de las PyMEs por la adopción del servicio al pensar "a mí no me pasará algo así".
+                    </p>
+                    <div class="riesgo-mitigacion">
+                        <strong>Estrategia de Mitigación:</strong>
+                        <p>Programa piloto con 10 clientes para generar casos de éxito.</p>
                     </div>
-                    <p class="riesgo-mitigacion"><strong>Mitigación:</strong> Planificación detallada, sprints ágiles</p>
+                </div>
+
+                <!-- Riesgo 4: Seguridad Propia -->
+                <div class="riesgo-card glass-card">
+                    <div class="riesgo-header">
+                        <h4 class="riesgo-nombre">Seguridad Propia</h4>
+                        <span class="riesgo-nivel critical">Crítico</span>
+                    </div>
+                    <p class="riesgo-descripcion">
+                        <strong>Descripción e Impacto:</strong> Compromiso de la infraestructura FortaGuard, que afecte la seguridad y confianza.
+                    </p>
+                    <div class="riesgo-mitigacion">
+                        <strong>Estrategia de Mitigación:</strong>
+                        <p>Auditorías continuas y separación estricta de entornos.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BIA Section (Placeholder) -->
+    <!-- BIA Section -->
     <section id="bia" class="bia-section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">BIA - Business Impact Analysis</h2>
                 <p class="section-subtitle">Análisis de impacto en procesos tácticos críticos</p>
-                <div class="placeholder-badge">
-                    <i class="fas fa-clock"></i> Sección en desarrollo
-                </div>
             </div>
             <div class="bia-grid">
-                <div class="bia-card glass-card placeholder">
+                <!-- Proceso 1: Detección y Respuesta a Incidentes (EDR) -->
+                <div class="bia-card glass-card criticidad-critica">
                     <div class="bia-header">
                         <div class="bia-icon">
-                            <i class="fas fa-exclamation-triangle"></i>
+                            <i class="fas fa-shield-virus"></i>
                         </div>
-                        <h3 class="bia-proceso">Proceso de Detección de Amenazas</h3>
+                        <h3 class="bia-proceso">Detección y Respuesta a Incidentes (EDR)</h3>
+                        <span class="bia-criticidad critical">Crítica</span>
                     </div>
+                    <p class="bia-descripcion">Monitoreo 24/7 y respuesta a amenazas en endpoints de clientes.</p>
+                    
                     <div class="bia-metrics">
                         <div class="bia-metric">
                             <span class="metric-label">RTO</span>
@@ -1016,105 +1009,176 @@
                         </div>
                         <div class="bia-metric">
                             <span class="metric-label">MTD</span>
-                            <span class="metric-value">2 horas</span>
-                        </div>
-                    </div>
-                    <div class="bia-impacto">
-                        <h4>Impacto Financiero</h4>
-                        <p class="impacto-value">$50,000 - $100,000 MXN/hora</p>
-                    </div>
-                    <div class="bia-timeline">
-                        <div class="timeline-bar">
-                            <div class="timeline-segment rpo" style="width: 25%;">
-                                <span>RPO</span>
-                            </div>
-                            <div class="timeline-segment rto" style="width: 50%;">
-                                <span>RTO</span>
-                            </div>
-                            <div class="timeline-segment mtd" style="width: 100%;">
-                                <span>MTD</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bia-card glass-card placeholder">
-                    <div class="bia-header">
-                        <div class="bia-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3 class="bia-proceso">Sistema de Gestión de Datos</h3>
-                    </div>
-                    <div class="bia-metrics">
-                        <div class="bia-metric">
-                            <span class="metric-label">RTO</span>
-                            <span class="metric-value">30 minutos</span>
-                        </div>
-                        <div class="bia-metric">
-                            <span class="metric-label">RPO</span>
-                            <span class="metric-value">5 minutos</span>
-                        </div>
-                        <div class="bia-metric">
-                            <span class="metric-label">MTD</span>
-                            <span class="metric-value">1 hora</span>
-                        </div>
-                    </div>
-                    <div class="bia-impacto">
-                        <h4>Impacto Financiero</h4>
-                        <p class="impacto-value">$75,000 - $150,000 MXN/hora</p>
-                    </div>
-                    <div class="bia-timeline">
-                        <div class="timeline-bar">
-                            <div class="timeline-segment rpo" style="width: 20%;">
-                                <span>RPO</span>
-                            </div>
-                            <div class="timeline-segment rto" style="width: 50%;">
-                                <span>RTO</span>
-                            </div>
-                            <div class="timeline-segment mtd" style="width: 100%;">
-                                <span>MTD</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bia-card glass-card placeholder">
-                    <div class="bia-header">
-                        <div class="bia-icon">
-                            <i class="fas fa-user-shield"></i>
-                        </div>
-                        <h3 class="bia-proceso">Portal de Clientes (SOC)</h3>
-                    </div>
-                    <div class="bia-metrics">
-                        <div class="bia-metric">
-                            <span class="metric-label">RTO</span>
-                            <span class="metric-value">2 horas</span>
-                        </div>
-                        <div class="bia-metric">
-                            <span class="metric-label">RPO</span>
-                            <span class="metric-value">30 minutos</span>
-                        </div>
-                        <div class="bia-metric">
-                            <span class="metric-label">MTD</span>
                             <span class="metric-value">4 horas</span>
                         </div>
                     </div>
-                    <div class="bia-impacto">
-                        <h4>Impacto Financiero</h4>
-                        <p class="impacto-value">$25,000 - $50,000 MXN/hora</p>
-                    </div>
+                    
                     <div class="bia-timeline">
                         <div class="timeline-bar">
-                            <div class="timeline-segment rpo" style="width: 25%;">
-                                <span>RPO</span>
+                            <div class="timeline-segment rpo" style="width: 6.25%;" title="RPO: 15 min">
+                                <span class="timeline-label">RPO</span>
                             </div>
-                            <div class="timeline-segment rto" style="width: 50%;">
-                                <span>RTO</span>
+                            <div class="timeline-segment rto" style="width: 25%;" title="RTO: 1 hora">
+                                <span class="timeline-label">RTO</span>
                             </div>
-                            <div class="timeline-segment mtd" style="width: 100%;">
-                                <span>MTD</span>
+                            <div class="timeline-segment mtd" style="width: 100%;" title="MTD: 4 horas">
+                                <span class="timeline-label">MTD</span>
                             </div>
                         </div>
+                    </div>
+                    
+                    <div class="bia-impacto">
+                        <h4>Impacto Financiero por Hora</h4>
+                        <p class="impacto-value">$50,000 MXN</p>
+                        <p class="impacto-clientes"><strong>Impacto en Clientes:</strong> Alto - Afecta a todos los clientes activos</p>
+                    </div>
+                    
+                    <div class="bia-dependencias">
+                        <h4>Dependencias</h4>
+                        <ul>
+                            <li>🎯 Cluster Kubernetes</li>
+                            <li>🔍 Motor EDR</li>
+                            <li>📊 Base de Datos NoSQL (logs)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bia-estrategia">
+                        <h4>Estrategia de Continuidad</h4>
+                        <ul>
+                            <li>Redundancia multi-región</li>
+                            <li>Failover automático</li>
+                            <li>Equipo SOC de guardia 24/7</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Proceso 2: Escaneo y Gestión de Vulnerabilidades -->
+                <div class="bia-card glass-card criticidad-alta">
+                    <div class="bia-header">
+                        <div class="bia-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="bia-proceso">Escaneo y Gestión de Vulnerabilidades</h3>
+                        <span class="bia-criticidad high">Alta</span>
+                    </div>
+                    <p class="bia-descripcion">Análisis periódico de vulnerabilidades en la infraestructura de clientes.</p>
+                    
+                    <div class="bia-metrics">
+                        <div class="bia-metric">
+                            <span class="metric-label">RTO</span>
+                            <span class="metric-value">6 horas</span>
+                        </div>
+                        <div class="bia-metric">
+                            <span class="metric-label">RPO</span>
+                            <span class="metric-value">24 horas</span>
+                        </div>
+                        <div class="bia-metric">
+                            <span class="metric-label">MTD</span>
+                            <span class="metric-value">48 horas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bia-timeline">
+                        <div class="timeline-bar">
+                            <div class="timeline-segment rpo" style="width: 50%;" title="RPO: 24 horas">
+                                <span class="timeline-label">RPO</span>
+                            </div>
+                            <div class="timeline-segment rto" style="width: 12.5%;" title="RTO: 6 horas">
+                                <span class="timeline-label">RTO</span>
+                            </div>
+                            <div class="timeline-segment mtd" style="width: 100%;" title="MTD: 48 horas">
+                                <span class="timeline-label">MTD</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bia-impacto">
+                        <h4>Impacto Financiero por Día</h4>
+                        <p class="impacto-value">$15,000 MXN</p>
+                        <p class="impacto-clientes"><strong>Impacto en Clientes:</strong> Medio - No afecta operación inmediata</p>
+                    </div>
+                    
+                    <div class="bia-dependencias">
+                        <h4>Dependencias</h4>
+                        <ul>
+                            <li>🔬 Motor de Escaneo</li>
+                            <li>🗄️ Base de Datos SQL</li>
+                            <li>💻 Portal Cliente (reportes)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bia-estrategia">
+                        <h4>Estrategia de Continuidad</h4>
+                        <ul>
+                            <li>Escaneos programados con buffer</li>
+                            <li>Respaldos de configuraciones</li>
+                            <li>Proceso manual alternativo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Proceso 3: Capacitación y Simulación (Phishing) -->
+                <div class="bia-card glass-card criticidad-media">
+                    <div class="bia-header">
+                        <div class="bia-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3 class="bia-proceso">Capacitación y Simulación (Phishing)</h3>
+                        <span class="bia-criticidad medium">Media</span>
+                    </div>
+                    <p class="bia-descripcion">Entrenamiento continuo de empleados mediante simulaciones de ingeniería social.</p>
+                    
+                    <div class="bia-metrics">
+                        <div class="bia-metric">
+                            <span class="metric-label">RTO</span>
+                            <span class="metric-value">24 horas</span>
+                        </div>
+                        <div class="bia-metric">
+                            <span class="metric-label">RPO</span>
+                            <span class="metric-value">7 días</span>
+                        </div>
+                        <div class="bia-metric">
+                            <span class="metric-label">MTD</span>
+                            <span class="metric-value">2 semanas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bia-timeline">
+                        <div class="timeline-bar">
+                            <div class="timeline-segment rpo" style="width: 50%;" title="RPO: 7 días">
+                                <span class="timeline-label">RPO</span>
+                            </div>
+                            <div class="timeline-segment rto" style="width: 14.3%;" title="RTO: 24 horas">
+                                <span class="timeline-label">RTO</span>
+                            </div>
+                            <div class="timeline-segment mtd" style="width: 100%;" title="MTD: 2 semanas">
+                                <span class="timeline-label">MTD</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bia-impacto">
+                        <h4>Impacto Financiero por Semana</h4>
+                        <p class="impacto-value">$5,000 MXN</p>
+                        <p class="impacto-clientes"><strong>Impacto en Clientes:</strong> Bajo - Proceso no crítico inmediato</p>
+                    </div>
+                    
+                    <div class="bia-dependencias">
+                        <h4>Dependencias</h4>
+                        <ul>
+                            <li>🎣 Sistema de Simulación de Phishing</li>
+                            <li>📚 Biblioteca de Capacitación</li>
+                            <li>💻 Portal Cliente (resultados)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bia-estrategia">
+                        <h4>Estrategia de Continuidad</h4>
+                        <ul>
+                            <li>Campañas programadas con anticipación</li>
+                            <li>Contenido pre-cargado</li>
+                            <li>Proveedores de capacitación externos como backup</li>
+                        </ul>
                     </div>
                 </div>
             </div>
