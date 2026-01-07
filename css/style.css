@@ -1242,13 +1242,122 @@ section {
     background: var(--neutral-gray);
 }
 
-.risk-matrix-label-y {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-    font-weight: 600;
+.riesgos-heatmap {
+    margin-bottom: var(--spacing-xxl);
+    padding: var(--spacing-xl);
+}
+
+.heatmap-title {
+    text-align: center;
     color: var(--text-primary);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.heatmap-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.heatmap-y-axis {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.heatmap-y-axis .axis-label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.heatmap-y-axis .axis-values {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.heatmap-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.heatmap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 6px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.heatmap-x-axis {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 400px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: var(--spacing-xs);
+}
+
+.heatmap-cell {
+    aspect-ratio: 1;
+    border-radius: var(--radius-sm);
+    transition: var(--transition-fast);
+    cursor: pointer;
+    position: relative;
+}
+
+.heatmap-cell[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.heatmap-cell.low {
+    background: rgba(6, 255, 165, 0.3);
+    border: 1px solid rgba(6, 255, 165, 0.5);
+}
+
+.heatmap-cell.medium {
+    background: rgba(244, 211, 94, 0.4);
+    border: 1px solid rgba(244, 211, 94, 0.6);
+}
+
+.heatmap-cell.high {
+    background: rgba(255, 107, 53, 0.5);
+    border: 1px solid rgba(255, 107, 53, 0.7);
+}
+
+.heatmap-cell.critical {
+    background: rgba(230, 57, 70, 0.6);
+    border: 1px solid rgba(230, 57, 70, 0.8);
+}
+
+.heatmap-x-label {
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-top: var(--spacing-sm);
+    text-align: center;
+    font-size: 0.95rem;
 }
 
 /* Risk Card Improvements */
@@ -1950,4 +2059,3 @@ button:focus {
         box-shadow: none;
     }
 }
-
