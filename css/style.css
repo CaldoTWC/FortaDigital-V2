@@ -1089,21 +1089,8 @@ section {
 }
 
 /* ============================================
-   Placeholder Sections
+   Activos Section
    ============================================ */
-.placeholder-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    padding: var(--spacing-xs) var(--spacing-md);
-    background: rgba(244, 211, 94, 0.2);
-    color: var(--accent-yellow);
-    border-radius: var(--radius-full);
-    font-size: 0.9rem;
-    margin-top: var(--spacing-sm);
-}
-
-/* Activos Section */
 .activos-section {
     background: linear-gradient(180deg, var(--neutral-dark) 0%, var(--neutral-gray) 100%);
 }
